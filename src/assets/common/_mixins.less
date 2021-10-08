@@ -1,0 +1,421 @@
+﻿// @keyframes fadeout {
+//     to {
+//         width: 0;
+//         height: 0;
+//         visibility: hidden;
+//     }
+// }
+
+// @-moz-keyframes fadeout { /* Firefox */
+//     to {
+//         width: 0;
+//         height: 0;
+//         visibility: hidden;
+//     }
+// }
+
+// @-webkit-keyframes fadeout { /* Safari and Chrome */
+//     to {
+//         width: 0;
+//         height: 0;
+//         visibility: hidden;
+//     }
+// }
+
+// @-o-keyframes fadeout { /* Opera */
+//     to {
+//         width: 0;
+//         height: 0;
+//         visibility: hidden;
+//     }
+// }
+
+// //========================================================================
+// @keyframes fadein {
+//     from {
+//         ._transparent(0, 0%);
+//     }
+
+//     to {
+//         ._transparent(1, 100%);
+//     }
+// }
+
+// @-moz-keyframes fadein { /* Firefox */
+//     from {
+//         ._transparent(0, 0%);
+//     }
+
+//     to {
+//         ._transparent(1, 100%);
+//     }
+// }
+
+// @-webkit-keyframes fadein { /* Safari and Chrome */
+//     from {
+//         ._transparent(0, 0%);
+//     }
+
+//     to {
+//         ._transparent(1, 100%);
+//     }
+// }
+
+// @-o-keyframes fadein { /* Opera */
+//     from {
+//         ._transparent(0, 0%);
+//     }
+
+//     to {
+//         ._transparent(1, 100%);
+//     }
+// }
+
+// /* ======================================================================================== */
+// @keyframes blinker {
+//     50% {
+//         ._transparent(0, 0%);
+//     }
+// }
+
+/* ======================================================================================== */
+._rounded-corners(@radius: 13px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+// ._transform(@value) {
+//     -webkit-transform: @value; /* Safari 3.1+, Chrome */
+//     -moz-transform: @value; /* Firefox 3.5-15 */
+//     -ms-transform: @value; /* IE9+ */
+//     -o-transform: @value; /* Opera 10.5-12.00 */
+//     transform: @value; /* Firefox 16+, Opera 12.50+ */
+// }
+
+// ._rotate(@degree: 180deg) {
+//     -webkit-transform: rotate(@degree); /* Safari 3.1+, Chrome */
+//     -moz-transform: rotate(@degree); /* Firefox 3.5-15 */
+//     -ms-transform: rotate(@degree); /* IE9+ */
+//     -o-transform: rotate(@degree); /* Opera 10.5-12.00 */
+//     transform: rotate(@degree); /* Firefox 16+, Opera 12.50+ */
+// }
+
+// ._scale(@value1: 1, @value2: 1) {
+//     -webkit-transform: scale(@value1, @value2); /* Safari 3.1+, Chrome */
+//     -moz-transform: scale(@value1, @value2); /* Firefox 3.5-15 */
+//     -ms-transform: scale(@value1, @value2); /* IE9+ */
+//     -o-transform: scale(@value1, @value2); /* Opera 10.5-12.00 */
+//     transform: scale(@value1, @value2); /* Firefox 16+, Opera 12.50+ */
+// }
+
+._translate(@value1: -50%, @value2: -50%) {
+  -webkit-transform: translate(@value1, @value2); /* Safari 3.1+, Chrome */
+  -moz-transform: translate(@value1, @value2); /* Firefox 3.5-15 */
+  -ms-transform: translate(@value1, @value2); /* IE9+ */
+  -o-transform: translate(@value1, @value2); /* Opera 10.5-12.00 */
+  transform: translate(@value1, @value2); /* Firefox 16+, Opera 12.50+ */
+}
+
+._transition(@time: 0.3s, @effect: ease-out, $propery: all) {
+  -webkit-transition: $propery @time @effect; /* Safari 3.2+, Chrome */
+  -moz-transition: $propery @time @effect; /* Firefox 4-15 */
+  -ms-transform: $propery @time @effect; /* IE9+ */
+  -o-transition: $propery @time @effect; /* Opera 10.5–12.00 */
+  transition: $propery @time @effect; /* Firefox 16+, Opera 12.50+ */
+}
+
+// ._blinker() {
+//     animation: blinker 1.7s linear infinite;
+//     -moz-animation: blinker 1.7s linear infinite; /* Firefox */
+//     -webkit-animation: blinker 1.7s linear infinite; /* Safari and Chrome */
+//     -o-animation: blinker 1.7s linear infinite; /* Opera */
+// }
+
+// ._fadeOut(@time: 1s) {
+//     //animation: fadeout @time;
+//     //-moz-animation: fadeout @time; /* Firefox */
+//     //-webkit-animation: fadeout @time; /* Safari and Chrome */
+//     //-o-animation: fadeout @time; /* Opera */
+//     -moz-animation: fadeout 0s ease-in @time forwards;
+//     /* Firefox */
+//     -webkit-animation: fadeout 0s ease-in @time forwards;
+//     /* Safari and Chrome */
+//     -o-animation: fadeout 0s ease-in @time forwards;
+//     /* Opera */
+//     animation: fadeout 0s ease-in @time forwards;
+//     -webkit-animation-fill-mode: forwards;
+//     animation-fill-mode: forwards;
+// }
+
+// ._fadeout(@time: 1s) {
+//     //animation: fadeout @time;
+//     //-moz-animation: fadeout @time; /* Firefox */
+//     //-webkit-animation: fadeout @time; /* Safari and Chrome */
+//     //-o-animation: fadeout @time; /* Opera */
+//     -moz-animation: fadeout 0s ease-in @time forwards;
+//     /* Firefox */
+//     -webkit-animation: fadeout 0s ease-in @time forwards;
+//     /* Safari and Chrome */
+//     -o-animation: fadeout 0s ease-in @time forwards;
+//     /* Opera */
+//     animation: fadeout 0s ease-in @time forwards;
+//     -webkit-animation-fill-mode: forwards;
+//     animation-fill-mode: forwards;
+// }
+
+._fadeIn(@time: 1s) {
+  animation: fadein @time;
+  -moz-animation: fadein @time; /* Firefox */
+  -webkit-animation: fadein @time; /* Safari and Chrome */
+  -o-animation: fadein @time; /* Opera */
+}
+
+._fadein(@time: 1s) {
+  animation: fadein @time;
+  -moz-animation: fadein @time; /* Firefox */
+  -webkit-animation: fadein @time; /* Safari and Chrome */
+  -o-animation: fadein @time; /* Opera */
+}
+
+._transparent(@value1: 0.5, @value2: 50%) {
+  filter: alpha(opacity= @value2);
+  -khtml-opacity: @value1;
+  -moz-opacity: @value1;
+  opacity: @value1;
+}
+
+._posfixed_center() {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  ._translate();
+}
+
+._pos-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  ._translate();
+}
+
+._pos_hoz-center() {
+  position: absolute;
+  left: 50%;
+  ._translate(-50%, 0);
+}
+
+._pos_ver-center() {
+  position: absolute;
+  top: 50%;
+  ._translate(0, -50%);
+}
+
+// ._reset-pos() {
+//     position: relative;
+//     top: auto;
+//     left: auto;
+//     ._translate(0, 0);
+// }
+
+// ._circle(@value: 100px) {
+//     border-radius: 50%;
+//     width: @value;
+//     height: @value;
+// }
+
+._shadow(@value: 0 3px 9px 0 rgba(0, 0, 0, 0.12)) {
+  -webkit-box-shadow: @value; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  box-shadow: @value; /* Opera 10.5, IE9+, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+._text-shadow(@value: 1px 1px 0px #ccc) {
+  text-shadow: @value;
+}
+
+._textOverFlow(@value: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-inline-box; //chrome
+  //display: -webkit-box; //default
+  //display: inline-block; //firefox
+  //width: 100%; //firefox
+  //white-space: nowrap; //firefox
+  -webkit-line-clamp: @value;
+  -webkit-box-orient: vertical;
+}
+
+// ._textStackVertical() {
+//     display: flex; /* establish flex container */
+//     flex-direction: column; /* make main axis vertical */
+//     justify-content: center; /* center items vertically, in this case */
+//     align-items: center; /* center items horizontally, in this case */
+// }
+
+// ._textStackHorizontally() {
+//     display: flex;
+//     flex-direction: row; /* make main axis horizontal (default setting) */
+//     justify-content: center; /* center items horizontally, in this case */
+//     align-items: center; /* center items vertically, in this case */
+// }
+
+// ._textStack() {
+//     display: -webkit-flex;
+//     align-items: center; //chrome
+//     -webkit-align-items: center; //chrome
+//     display: -moz-box; // firefox
+//     -moz-box-align: center; //firefox
+//     display: flex; /* establish flex container */
+//     flex-direction: column; /* make main axis vertical */
+//     justify-content: center; /* center items vertically, in this case */
+//     align-items: center; /* center items horizontally, in this case */
+// }
+
+// .triangle(@width: 40px, @height: 40px, @backgroundColor: orange, @degree: -60deg) {
+//     position: relative;
+//     background-color: @backgroundColor;
+//     width: @width;
+//     height: @height;
+//     border-top-right-radius: 30%;
+//     -webkit-transform: rotate(@degree) skewX(-30deg) scale(1,.866);
+//     -moz-transform: rotate(@degree) skewX(-30deg) scale(1,.866);
+//     -ms-transform: rotate(@degree) skewX(-30deg) scale(1,.866);
+//     -o-transform: rotate(@degree) skewX(-30deg) scale(1,.866);
+//     transform: rotate(@degree) skewX(-30deg) scale(1,.866);
+
+//     &:before, &:after {
+//         content: '';
+//         position: absolute;
+//         background-color: inherit;
+//         width: @width;
+//         height: @height;
+//         border-top-right-radius: 30%;
+//     }
+
+//     &:before {
+//         -webkit-transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+//         -moz-transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+//         -ms-transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+//         -o-transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+//         transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+//     }
+
+//     &:after {
+//         -webkit-transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+//         -moz-transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+//         -ms-transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+//         -o-transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+//         transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+//     }
+// }
+
+// .border-top(@width: 1px, @color: #f2f2f2) {
+//     ._shadow(inset 0 @width 0 @color);
+// }
+
+// .border-right(@width: 1px, @color: #f2f2f2) {
+//     ._shadow(inset -@width 0 0 @color);
+// }
+
+// .border-bottom(@width: 1px, @color: #f2f2f2) {
+//     ._shadow(inset 0 -@width 0 @color);
+// }
+
+// .border-left(@width: 1px, @color: #f2f2f2) {
+//     ._shadow(inset @width 0 0 @color);
+// }
+
+// .border-b-right(@width: 1px, @color: #f2f2f2) {
+//     ._shadow(inset -@width -@width 0 @color);
+// }
+
+// .border-b-left(@width: 1px, @color: #f2f2f2) {
+//     ._shadow(inset @width -@width 0 @color);
+// }
+
+// .circle4parts(@width: 80px; @height: 80px; @color1: blue; @color2: yellow; @color3: red; @color4: green) {
+//     width: @width;
+//     height: @height;
+//     ._rounded-corners(50%);
+//     background: linear-gradient(45deg, @color1, @color1 100%), linear-gradient(225deg, @color2, @color2), linear-gradient(225deg, @color3, @color3), linear-gradient(135deg, @color4, @color4);
+//     background-size: 50% 50%;
+//     background-position: 0% 0%, 0% 100%, 100% 0%, 100% 100%;
+//     background-repeat: no-repeat;
+// }
+
+// .linear-gradient(@colorTop, @colorBottom) {
+//     background: @colorTop; /* Old browsers */
+//     background: -moz-linear-gradient(top, @colorTop 1%, @colorBottom 100%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(top, @colorTop 1%,@colorBottom 100%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(to bottom, @colorTop 1%,@colorBottom 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@colorTop, endColorstr=@colorBottom,GradientType=0 ); /* IE6-9 */
+// }
+
+// .linear-gradient-x(@colorTop, @colorBottom) {
+//     background: @colorTop; /* Old browsers */
+//     background: -moz-linear-gradient(top, @colorTop 1%, @colorTop 11%, @colorBottom 100%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(top, @colorTop 1%,@colorTop 11%,@colorBottom 100%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(to bottom, @colorTop 1%,@colorTop 11%,@colorBottom 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@colorTop, endColorstr=@colorBottom,GradientType=0 ); /* IE6-9 */
+// }
+
+// .text-linear-gradient(@colorTop, @colorBottom) {
+//     background: @colorTop; /* Old browsers */
+//     background: -moz-linear-gradient(top, @colorTop 1%, @colorTop 11%, @colorBottom 100%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(top, @colorTop 1%,@colorTop 11%,@colorBottom 100%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(to bottom, @colorTop 1%,@colorTop 11%,@colorBottom 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@colorTop, endColorstr=@colorBottom,GradientType=0 ); /* IE6-9 */
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+
+// .text-linear-gradient-bottom(@colorTop, @colorBottom) {
+//     background: @colorTop; /* Old browsers */
+//     background: -moz-linear-gradient(top, @colorTop 1%, @colorBottom 89%, @colorBottom 100%); /* FF3.6-15 */
+//     background: -webkit-linear-gradient(top, @colorTop 1%, @colorBottom 89%, @colorBottom 100%); /* Chrome10-25,Safari5.1-6 */
+//     background: linear-gradient(to bottom, @colorTop 1%, @colorBottom 89%, @colorBottom 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+//     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@colorTop, endColorstr=@colorBottom,GradientType=0 ); /* IE6-9 */
+//     -webkit-background-clip: text;
+//     -webkit-text-fill-color: transparent;
+// }
+
+// ._columms-split(@numberOfColumns: 2, @border: 0px solid #ccc, @gapValue: 15px) {
+//     -webkit-column-count: @numberOfColumns; /* Chrome, Safari, Opera */
+//     -moz-column-count: @numberOfColumns; /* Firefox */
+//     column-count: @numberOfColumns;
+//     -webkit-column-rule: @border;
+//     -moz-column-rule: @border;
+//     column-rule: @border;
+//     -webkit-column-gap: @gapValue; /* Chrome, Safari, Opera */
+//     -moz-column-gap: @gapValue; /* Firefox */
+//     column-gap: @gapValue;
+// }
+
+._clearfix() {
+  zoom: 1; // For IE 6/7 (trigger hasLayout)
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// ._col-half (@number) {
+//     width: (8.33333333% * @number) + 4.16666665%;
+// }
+
+._h-100() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  height: 100%;
+}

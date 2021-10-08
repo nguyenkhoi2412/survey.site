@@ -1,0 +1,94 @@
+{
+  "validate": {
+    "required": "* yêu cầu bắt buộc nhập",
+    "isnumber": "* yêu cầu nhập số",
+    "email": "Email không đúng định dạng",
+    "mustbegreater_startdate": "Ngày kết thúc phải được chọn sau ngày bắt đầu"
+  },
+  "signin": {
+    "username": "Tên đăng nhập",
+    "password": "Mật khẩu",
+    "signin": "Đăng nhập",
+    "signout": "Đăng xuất",
+    "rememberme": "Remember me",
+    "forgotpassword": "Forgot password?",
+    "register": "Register now?",
+    "enterusername": "Nhập vào tên đang nhập",
+    "enterpassword": "Nhập mật khẩu"
+  },
+  "user": {
+    "firstname": "Họ & tên lót",
+    "lastname": "Tên",
+    "fullname": "Họ tên",
+    "email": "Email",
+    "birthday": "Ngày sinh"
+  },
+  "common": {
+    "addmore": "Thêm mới",
+    "addnew": "Thêm mới",
+    "insert": "Thêm mới",
+    "cancel": "Thoát",
+    "close": "Đóng",
+    "delete": "Xóa",
+    "reset": "Reset",
+    "confirm": "Xác nhận lại",
+    "save": "Lưu",
+    "saving": "Đang lưu...",
+    "datasaved": "Dữ liệu đã được lưu",
+    "datadeleted": "Dữ liệu đã xóa",
+    "loading": "Đang tải",
+    "edit": "Cập nhật",
+    "update": "Thay đổi",
+    "areyousurethisrecord": "Bạn có chắc đang muốn xóa dữ liệu này?",
+    "selectall": "Chọn tất cả",
+    "next": "Tiếp",
+    "complete": "Hoàn thành"
+  },
+  "site": {
+    "currentcy-unit": "VNĐ",
+    "categories": "Chủ đề",
+    "surveys": "Trắc nghiệm",
+    "questionnaire": "Bộ câu hỏi",
+    "title": "Tiêu đề ",
+    "sub_title": "Hỗ trợ tiêu đề",
+    "description": "Chi tiết",
+    "selecttype": "Chọn thể loại",
+    "sort-no": "Sắp xếp",
+    "step": "Bước"
+  },
+  "type": {
+    "createnewtype": "Thêm mới thể loại"
+  },
+  "category": {
+    "createnewcategory": "Thêm mới chủ đề",
+    "select_parent": "Chủ đề cha"
+  },
+  "question": {
+    "createnewquestion": "Thêm mới câu hỏi",
+    "updatequestion": "Thay đổi",
+    "name": "Câu hỏi",
+    "question_type": "Loại câu hỏi",
+    "choose_questiontype": "Chọn thể loại câu hỏi",
+    "answers": "Trả lời",
+    "answerselect": "Chọn câu trả lời",
+    "marks": "Điểm",
+    "numberOfOptionsAnswer": "Chọn số câu trả lời",
+    "review_questions": "Xem lại các câu hỏi"
+  },
+  "survey": {
+    "loggin": "Đăng nhập | Khảo sát",
+    "createnewsurvey": "Tạo mới khảo sát",
+    "startdate": "Bắt đầu",
+    "enddate": "Kết thúc",
+    "timeduration": "Thời gian",
+    "updatesurvey": "Cập nhật khảo sát",
+    "onlinesurvey": "Khảo sát online",
+    "greattoseeagain": "Xin chào! Xin vui lòng điền thông tin của bạn tại đây, đăng nhập/đăng ký.",
+    "getanswerssurvey": "Hoàn thành các câu trả lời của bạn.",
+    "surveyintros": "Các cuộc khảo sát cung cấp cho bạn thông tin chi tiết hữu ích và quan điểm mới.",
+    "chooseyourtest": "Chọn bài khảo sát",
+    "greatdone": "Thật tuyệt, bạn đã hoàn thành tất cả câu hỏi khảo sát!",
+    "completeyourtest": "Mời bạn hoàn thành các bài khảo sát",
+    "yourresult": "Kết quả của bạn"
+  }
+}

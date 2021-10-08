@@ -1,0 +1,73 @@
+body.survey {
+  .ant-message {
+    top: 50px;
+  }
+}
+
+.layout {
+  &.survey {
+    .selection {
+      flex: 1;
+      padding: 0 32px;
+
+      @media @tablet-strict {
+        padding: 0 16px;
+      }
+
+      @media @breakpoint-xs {
+        padding: 0 16px;
+      }
+
+      .intros {
+        .ant-space {
+          width: 100%;
+
+          @media @breakpoint-xs {
+            text-align: center;
+          }
+        }
+
+        h5 {
+          font-weight: 400;
+        }
+      }
+
+      .select-test {
+        .survey-title {
+          margin-top: 16px;
+          margin-bottom: 0;
+        }
+
+        .card-container {
+          width: 100%;
+
+          > .ant-col {
+            @media @phone {
+              flex: 0 0 100%;
+              max-width: 100%;
+              margin-bottom: 8px;
+            }
+          }
+
+          .ant-card {
+            cursor: pointer;
+
+            .ant-card-meta-detail {
+              .ant-card-meta-title {
+                color: #fff;
+              }
+
+              .ant-card-meta-description {
+                color: #fff;
+              }
+            }
+
+            &:hover {
+              ._transparent(0.85, 85%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

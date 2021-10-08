@@ -1,0 +1,311 @@
+/* Force update ant style */
+
+/* FORMS */
+.form-container {
+  .ant-row {
+    .ant-form-item-explain {
+      color: @text-color;
+      font-size: 0.785em;
+      margin-left: 1px;
+    }
+
+    // change color when validate
+    &[class$="has-error"] {
+      .ant-form-item-explain {
+        color: @error-color;
+      }
+
+      // change color when validate for editor
+      .quill {
+        .ql-toolbar,
+        .ql-container {
+          &.ql-snow {
+            border-color: @error-color;
+          }
+        }
+      }
+    }
+
+    &[class$="has-warning"] {
+      .ant-form-item-explain {
+        color: @warning-color;
+      }
+    }
+
+    .ant-col {
+      &.ant-form-item-label {
+        padding: 0;
+      }
+
+      &.field-actions {
+        height: 40px;
+
+        .ant-space {
+          height: 100%;
+          width: 100%;
+
+          .ant-space-item {
+            position: relative;
+            width: inherit;
+            height: inherit;
+          }
+
+          .anticon {
+            font-size: 30px;
+            color: @primary-color;
+            cursor: pointer;
+            ._pos_ver-center();
+
+            &.delete {
+              color: @error-color;
+            }
+          }
+        }
+      }
+    }
+
+    &.quill_style {
+      &[class$="has-error"] {
+        .ant-form-item-explain-error {
+          margin-top: -14px;
+        }
+      }
+    }
+
+    &.form-actions {
+      // display: flex;
+      // flex-direction: row-reverse;
+      // position: absolute;
+      // right: 8px;
+      // bottom: 100px;
+      text-align: right;
+
+      button {
+        margin-right: 8px;
+
+        &:nth-last-of-type(1) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.field-container {
+  .ant-input {
+    padding: 4px 12px 4px 11px;
+    height: 40px;
+
+    + .ant-input-suffix {
+      .ant-input-clear-icon,
+      .anticon-eye-invisible {
+        margin-right: -2px;
+      }
+    }
+
+    &[name="password"] {
+      + .ant-input-suffix {
+        .ant-input-clear-icon {
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+
+  .ant-select {
+    width: 100%;
+
+    &:not(.ant-select-customize-input) {
+      .ant-select-selector {
+        height: 40px;
+        padding: 4px 10px 4px 11px;
+
+        .ant-select-selection-search-input {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .ant-picker {
+    width: 100%;
+    height: 40px;
+  }
+
+  textarea {
+    &.form-control {
+      height: 104px;
+
+      + .ant-input-suffix {
+        .ant-input-clear-icon {
+          margin-right: 2px;
+        }
+      }
+    }
+
+    + .ant-input-suffix {
+      .ant-input-clear-icon {
+        margin-right: 2px;
+      }
+    }
+  }
+}
+
+/* FLOATING LABEL */
+//Custom version of floating label using the ant suffix method
+.group-floating-label {
+  position: relative;
+
+  .form-control {
+    .ant-input {
+      &:focus + .ant-input-suffix {
+        .floating-label {
+          top: -8px;
+          background: #fff;
+          padding: 0 4px;
+          left: 8px;
+          font-size: 10px;
+        }
+      }
+    }
+
+    &[class*="input-with-clear-btn"] {
+      .ant-input-suffix {
+        .floating-label {
+          top: -8px;
+          background: #fff;
+          padding: 0 4px;
+          left: 8px;
+          font-size: 10px;
+        }
+      }
+    }
+
+    .ant-input-suffix {
+      .floating-label {
+        font-weight: normal;
+        position: absolute;
+        pointer-events: none;
+        left: 12px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transition: 0.2s ease all; /* Safari 3.2+, Chrome */
+        -moz-transition: 0.2s ease all; /* Firefox 4-15 */
+        -ms-transform: 0.2s ease all; /* IE9+ */
+        -o-transition: 0.2s ease all; /* Opera 10.5–12.00 */
+        transition: 0.2s ease all; /* Firefox 16+, Opera 12.50+ */
+      }
+    }
+  }
+
+  // change color when validate
+  &[class$="has-error"] {
+    .floating-label {
+      color: @error-color;
+    }
+  }
+
+  &[class$="has-warning"] {
+    .floating-label {
+      color: @warning-color;
+    }
+  }
+}
+
+/* INPUT/SELECT */
+.ant-input-affix-wrapper {
+  .ant-input-prefix {
+    > input.ant-input {
+      padding: 4px 12px 4px 11px;
+      height: auto;
+    }
+  }
+
+  input.ant-input {
+    padding: 4px 0;
+    height: auto;
+  }
+}
+
+.ant-btn {
+  height: 35px;
+}
+
+/* TOOLTIPS */
+.ant-tooltip-inner,
+.ant-tooltip-arrow-content {
+  background: #fff;
+  color: @text-color;
+}
+
+/* BUTTONS */
+.ant-btn-background-ghost {
+  &.ant-btn-primary {
+    &:not(:disabled) {
+      &:hover {
+        background-color: @primary-color !important;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* TABLES */
+.ant-table-wrapper {
+  .ant-table-body {
+    > table {
+      thead {
+        &.ant-table-thead {
+          th {
+            &.ant-table-column-sort {
+              background: transparent;
+            }
+          }
+        }
+      }
+
+      tbody {
+        .ant-table-cell {
+          .subTitle {
+            font-size: 11px;
+            font-style: italic;
+            border: none;
+            background: 0;
+            padding: 0;
+          }
+
+          .ant-space {
+            &.icon-name {
+              .ant-space-item {
+                padding-top: 4px;
+
+                .anticon {
+                  color: @primary-color;
+                  font-size: 18px;
+                }
+
+                &:nth-last-of-type(1) {
+                  margin-top: -4px;
+                }
+              }
+            }
+          }
+
+          &.actions {
+            .callback {
+              cursor: pointer;
+              color: @primary-color;
+              ._rounded-corners(4px);
+              border-color: @primary-color;
+
+              &:hover {
+                background: @primary-color;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

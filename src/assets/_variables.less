@@ -1,0 +1,50 @@
+﻿// default color for antd
+@import "~antd/lib/style/themes/default.less";
+// @primary-color: #1890ff; // primary color for all components
+// @link-color: #1890ff; // link color
+// @success-color: #52c41a; // success state color
+// @warning-color: #faad14; // warning state color
+// @error-color: #f5222d; // error state color
+// @font-size-base: 14px; // major text font size
+// @heading-color: rgba(0, 0, 0, 0.85); // heading text color
+// @text-color: rgba(0, 0, 0, 0.65); // major text color
+// @text-color-secondary: rgba(0, 0, 0, 0.45); // secondary text color
+// @disabled-color: rgba(0, 0, 0, 0.25); // disable state color
+// @border-radius-base: 2px; // major border radius
+// @border-color-base: #d9d9d9; // major border color
+// @box-shadow-base: 0 3px 6px -4px rgba(0, 0, 0, 0.12),
+//   0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05); // major shadow for layers
+
+// my color define
+@font-family: Roboto, Helvetica, Arial, sans-serif;
+@primary-color: green;
+@container-background-color: #f7f8fa;
+
+// breakpoint in ant-design
+// @breakpoints-xs: "480px";
+// @breakpoints-sm: "576px";
+// @breakpoints-md: "768px";
+// @breakpoints-lg: "992px";
+// @breakpoints-xl: "1200px";
+// @breakpoints-xxl: "1600px";
+
+@screen-xxs-min: 320px;
+@screen-xs-min: 480px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+@screen-xxs-max: (@screen-xxs-min - 1);
+@screen-xs-max: (@screen-sm-min - 1);
+@screen-sm-max: (@screen-md-min - 1);
+@screen-md-max: (@screen-lg-min - 1);
+
+@mobile: ~"only screen and (max-width: @{screen-xxs-min})"; // 320
+@phone: ~"only screen and (max-width: @{screen-xs-min})"; // 480
+@phone-strict: ~"only screen and (min-width: @{screen-xs-min}) and (max-width: @{screen-xs-max})"; // min: 480, max: 767
+@breakpoint-xs: ~"only screen and (max-width: @{screen-xs-max})"; // 768
+@tablet: ~"only screen and (min-width: @{screen-sm-min})"; // 768
+@tablet-strict: ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})"; // min: 767, max: 991
+@desktop: ~"only screen and (min-width: @{screen-md-min})"; // 992
+@desktop-strict: ~"only screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})"; // min: 992, max: 1199
+@large: ~"only screen and (min-width: @{screen-lg-min})"; // 1200

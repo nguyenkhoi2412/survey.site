@@ -1,0 +1,22 @@
+// @import "~antd/lib/style/themes/default.less";
+@import "~antd/dist/antd.less";
+@import "react-quill/dist/quill.snow.css";
+@import "./../assets/styles.less";
+
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: @font-family;
+
+  .ant-layout {
+    background: transparent;
+  }
+
+  @media @breakpoint-xs {
+    img {
+      max-width: 100%;
+    }
+  }
+}

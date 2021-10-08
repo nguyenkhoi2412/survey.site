@@ -1,0 +1,61 @@
+﻿/** Style custom for scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c6c6c6;
+}
+
+/* Handle on active */
+::-webkit-scrollbar-thumb:active {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a7a7a7;
+}
+
+/* Remove outline blue when focus */
+*:focus {
+  outline: none;
+}
+
+/** Style */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+
+  // &:focus,
+  // &:hover {
+  //   text-decoration: none;
+  // }
+}
+
+*:focus {
+  outline: none;
+  @include _shadow(0 0 0 0 transparent !important);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

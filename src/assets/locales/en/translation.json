@@ -1,0 +1,104 @@
+{
+  "validate": {
+    "required": "* is required",
+    "isnumber": "* be number",
+    "email": "Email is not valid",
+    "mustbebefore_startdate": "End date can't be before Start date",
+    "mustbegreater_startdate": "End date must be grater than start date"
+  },
+  "signin": {
+    "username": "Username",
+    "password": "Password",
+    "signin": "Sign in",
+    "signout": "Sign out",
+    "rememberme": "Remember me",
+    "forgotpassword": "Forgot password?",
+    "register": "Register now?",
+    "enterusername": "Enter Your usename",
+    "enterpassword": "Enter Your password"
+  },
+  "user": {
+    "firstname": "First name",
+    "lastname": "Last name",
+    "fullname": "Full name",
+    "email": "Email",
+    "birthday": "Birthday"
+  },
+  "common": {
+    "addmore": "Add more",
+    "addnew": "Add new",
+    "insert": "Insert",
+    "cancel": "Cancel",
+    "close": "Close",
+    "delete": "Delete",
+    "reset": "Reset",
+    "confirm": "Confirm",
+    "save": "Save",
+    "saving": "Saving...",
+    "datasaved": "Data saved",
+    "datadeleted": "Data deleted",
+    "loading": "Loading",
+    "edit": "Edit",
+    "addchild": "Add child",
+    "areyousurethisrecord": "Are you sure delete this record?",
+    "selectall": "Select all",
+    "next": "Next",
+    "complete": "Complete"
+  },
+  "site": {
+    "fieldenter": "Field enter",
+    "currentcy-unit": "USD",
+    "recent-types": "Recent types",
+    "types": "Types",
+    "categories": "Categories",
+    "surveys": "Surveys",
+    "questionnaire": "Questionnaire",
+    "title": "Title",
+    "sub_title": "Sub title",
+    "description": "Description",
+    "selecttype": "Select type",
+    "sort-no": "Sort no",
+    "step": "Step"
+  },
+  "type": {
+    "createnewtype": "Create a new type",
+    "edittype": "Edit type",
+    "typename": "Type name"
+  },
+  "category": {
+    "createnewcategory": "Create a new category",
+    "select_parent": "Select parent",
+    "updatecategory": "Update category"
+  },
+  "question": {
+    "createnewquestion": "Create new questions",
+    "updatequestion": "Update questions",
+    "name": "Question name",
+    "question_type": "Question type",
+    "choose_questiontype": "Choose a question type",
+    "options": "Options",
+    "answers": "Answers",
+    "answerselect": "User select",
+    "answerdesc": "Description",
+    "marks": "Marks",
+    "numberOfOptionsAnswer": "Number of questions answer",
+    "review_questions": "Review questions"
+  },
+  "survey": {
+    "loggin": "Survey | Log in",
+    "createnewsurvey": "Create a new survey",
+    "rangedate": "Range date",
+    "startdate": "Start date",
+    "enddate": "End date",
+    "timeduration": "Time duration",
+    "updatesurvey": "Update survey",
+    "onlinesurvey": "Online survey",
+    "greattoseeagain": "Great to see you! The tool is fired up and rrrready to go, log in here:",
+    "getanswerssurvey": "Get answers with surveys",
+    "surveyintros": "Be the person with great ideas. Surveys give you actionable insights and fresh perspectives.",
+    "chooseyourtest": "Choose your test",
+    "pleasecompletetest": "Please complete your test: ",
+    "greatdone": "Great, we have done all survey!",
+    "yourresult": "Your result"
+  }
+}

@@ -1,0 +1,34 @@
+.ant-drawer {
+  &.surveys {
+    .ant-drawer-content-wrapper {
+      width: 40% !important;
+
+      @media @desktop-strict {
+        width: 50% !important;
+      }
+
+      @media @tablet-strict {
+        width: 75% !important;
+      }
+
+      @media @breakpoint-xs {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+#frm-survey {
+  .ant-row {
+    .ant-col {
+      .field-container {
+        padding: 0 !important;
+      }
+
+      @media @phone {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

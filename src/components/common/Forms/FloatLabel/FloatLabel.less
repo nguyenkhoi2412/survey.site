@@ -1,0 +1,56 @@
+.float-label {
+  position: relative;
+  margin-bottom: 12px;
+
+  &.fff {
+    .label-float {
+      top: -8px;
+      background: #fff;
+      padding: 0 4px;
+      left: 8px;
+    }
+  }
+
+  .label {
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 12px;
+    top: 10px;
+    z-index: 1;
+    -webkit-transition: 0.2s ease all; /* Safari 3.2+, Chrome */
+    -moz-transition: 0.2s ease all; /* Firefox 4-15 */
+    -ms-transform: 0.2s ease all; /* IE9+ */
+    -o-transition: 0.2s ease all; /* Opera 10.5–12.00 */
+    transition: 0.2s ease all; /* Firefox 16+, Opera 12.50+ */
+  }
+
+  .label-float {
+    top: 4px;
+    font-size: 10px;
+  }
+
+  // change color when validate
+  [class$="has-error"] {
+    ~ .label {
+      color: @error-color;
+    }
+  }
+
+  [class$="has-warning"] {
+    ~ .label {
+      color: @warning-color;
+    }
+  }
+
+  // customize with form Ant Design
+  &.affix-wrapper {
+    > .label {
+      left: 36px;
+
+      &.label-float {
+        left: 8px;
+      }
+    }
+  }
+}

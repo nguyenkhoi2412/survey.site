@@ -1,0 +1,37 @@
+.ant-drawer {
+  &.categories {
+    .ant-drawer-content-wrapper {
+      width: 40% !important;
+
+      @media @desktop-strict {
+        width: 50% !important;
+      }
+
+      @media @tablet-strict {
+        width: 75% !important;
+      }
+
+      @media @breakpoint-xs {
+        width: 100% !important;
+      }
+    }
+
+    #frm-category {
+      &.form-container {
+        // > .ant-row {
+        //   > .field-container {
+        //     &:nth-of-type(1) {
+        //       padding-left: 8px !important;
+        //     }
+        //   }
+        // }
+
+        .quill {
+          .ql-container {
+            min-height: 250px;
+          }
+        }
+      }
+    }
+  }
+}

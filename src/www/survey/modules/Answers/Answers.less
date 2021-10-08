@@ -1,0 +1,66 @@
+.layout {
+  &.survey {
+    background-color: #fff;
+
+    .questions {
+      flex: 1;
+      padding: 0;
+
+      .tblQuestions {
+        .tblRow {
+          .tblCol {
+            border-bottom: 1px solid @border-color-base;
+            position: relative;
+            padding: 32px;
+            overflow-wrap: break-word;
+            font-size: 18px;
+
+            .tblQuest {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              > * {
+                margin-bottom: 24px;
+              }
+            }
+
+            .tblSelections {
+              margin-top: 20px;
+
+              .field-container {
+                .form-control {
+                  width: 100%;
+
+                  .ant-space {
+                    display: flex;
+
+                    .ant-radio-wrapper {
+                      // width: 100%;
+
+                      .ant-radio {
+                        .ant-radio-inner {
+                          width: 20px;
+                          height: 20px;
+
+                          &:after {
+                            width: 12px;
+                            height: 12px;
+                          }
+                        }
+
+                        + span {
+                          font-size: 18px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

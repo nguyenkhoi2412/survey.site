@@ -96,7 +96,7 @@ const SignIn = () => {
           className="wrapper"
           style={{ padding: 24 }}
         >
-          <Col xs={24} sm={16} md={12} lg={10} xl={8}>
+          <Col xs={24} sm={16} md={12} lg={10} xl={10}>
             <Row justify="center" align="middle">
               <Col xs={20} className="paper">
                 <Space direction="vertical" align="center">

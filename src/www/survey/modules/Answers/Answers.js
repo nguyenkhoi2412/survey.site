@@ -9,9 +9,8 @@ import {
 } from "@utils/helpers";
 import encrypt from "@utils/encrypt.helper";
 import RenderField from "@components/common/Forms/RenderField";
-import gVariables from "@stores/shared/variables";
 //#region ant design
-import { Row, Col, Form, Typography } from "antd";
+import { Row, Col, Form } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import {
   QUESTION_GET_BY_PAGENO,
@@ -22,11 +21,12 @@ import {
   userAnswerState,
 } from "@redux/ui/survey/user_answer.reducer";
 import { PROGRESS_WORKING_CHANGE } from "@redux/utils/shared.reducer";
+import { localeState } from "@redux/providers/site.reducer";
 
 const Answers = () => {
   //#region init data/hooks
   const { t } = useTranslation();
-  const locale = gVariables.locale;
+  const locale = useSelector(localeState);
   const dispatch = useDispatch();
   let dataState = useSelector(questionState);
   const user = useSelector(userAnswerState);

@@ -4,8 +4,8 @@ import { QUESTION_TYPES } from "@stores";
 import { buildTreeSelect } from "@utils/buildTreeView";
 //#region redux
 import { categoryState } from "@redux/providers/category.reducer";
-import { useDispatch, useSelector } from "react-redux";
-import { siteState } from "@redux/providers/site.reducer";
+import { useSelector } from "react-redux";
+import { siteState, localeState } from "@redux/providers/site.reducer";
 import gVariables from "@stores/shared/variables";
 import * as yup from "yup";
 //#endregion
@@ -44,7 +44,7 @@ export default {
   },
   validateSchema: (qType) => {
     const { t } = useTranslation();
-    const locale = gVariables.locale.default;
+    const locale = useSelector(localeState);
     const questionType = qType.text;
 
     const _objSchema = {
@@ -79,8 +79,7 @@ export default {
   dataForm: (qType) => {
     const { t } = useTranslation();
     const category = useSelector(categoryState);
-    const locale = gVariables.locale;
-    const questionType = qType.text;
+    const locale = useSelector(localeState);
 
     // render categories_ref
     const categoryRef = {
@@ -90,7 +89,7 @@ export default {
       type: "treeselect",
       label: t("site.categories"),
       renderName: "questions",
-      datasource: buildTreeSelect(category.d),
+      datasource: buildTreeSelect(category.d, locale.lang),
       xs: 24,
       sm: 24,
     };

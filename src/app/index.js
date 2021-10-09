@@ -28,7 +28,6 @@ const App = () => {
 
   const dispatch = useDispatch();
   const site = useSelector(siteState);
-  const locale = useSelector(localeState);
 
   //* GET SITE INFO
   React.useEffect(() => {
@@ -42,20 +41,6 @@ const App = () => {
     }
   }, [site.d]);
 
-  //* GET/SET LOCALE SITE
-  React.useEffect(() => {
-    if (Helpers.checkIsNotNull(locale)) {
-      gVariable.locale = {
-        ...gVariable.locale,
-        lang: locale.lang,
-        code: locale.code,
-        language_name: locale.language_name,
-        date_format: locale.date_format,
-        time_format: locale.time_format,
-      };
-    }
-  }, [locale]);
-  
   return (
     <>
       <ProgressBar />

@@ -17,7 +17,7 @@ import {
   TYPE_DELETE,
   typeState,
 } from "@redux/providers/type.reducer";
-import { siteState } from "@redux/providers/site.reducer";
+import { siteState, localeState } from "@redux/providers/site.reducer";
 import { Helpers } from "@utils/helpers";
 //#endregion
 
@@ -25,7 +25,7 @@ const Type = () => {
   //#region init data
   const { t } = useTranslation();
   const site = useSelector(siteState);
-  const locale = gVariables.locale.default;
+  const locale = useSelector(localeState);
   const dispatch = useDispatch();
   const dataStates = useSelector(typeState);
   const [tableStates, setTableStates] = React.useState({

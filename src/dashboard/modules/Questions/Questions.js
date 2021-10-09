@@ -13,16 +13,7 @@ import { Helpers, hooksInstance, objectExtension } from "@utils/helpers";
 import { buildTreeSelect } from "@utils/buildTreeView";
 //#endregion
 //#region ant design
-import {
-  Tooltip,
-  Row,
-  Col,
-  message,
-  Space,
-  Tag,
-  Popconfirm,
-  Select,
-} from "antd";
+import { Tooltip, Row, Col, message, Space, Tag, Popconfirm } from "antd";
 import {
   LineOutlined,
   MenuOutlined,
@@ -33,6 +24,7 @@ import {
 //#endregion
 //#region Redux
 import { useDispatch, useSelector } from "react-redux";
+import { localeState } from "@redux/providers/site.reducer";
 import {
   CATEGORY_GET_BY_TYPE,
   categoryState,
@@ -50,7 +42,7 @@ const Questions = () => {
 
   //#region init data
   const { t } = useTranslation();
-  const locale = gVariables.locale.default;
+  const locale = useSelector(localeState);
   const category = useSelector(categoryState);
   const dispatch = useDispatch();
   const dataStates = useSelector(questionState);
@@ -211,7 +203,7 @@ const Questions = () => {
               <Col xs={24} className="field-container">
                 <TreeViewSelect
                   name="categories_ref"
-                  datasource={buildTreeSelect(category.d)}
+                  datasource={buildTreeSelect(category.d, locale.lang)}
                   onChange={handleOnSelectCategory}
                   value={selectCategories}
                 />

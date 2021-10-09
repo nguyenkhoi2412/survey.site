@@ -1,7 +1,8 @@
 import { useTranslation } from "react-i18next";
-import gVariables from "@stores/shared/variables";
 import * as yup from "yup";
 import moment from "moment";
+import { localeState } from "@redux/providers/site.reducer";
+import { useSelector } from "react-redux";
 
 export default {
   initialValues: () => {
@@ -15,8 +16,8 @@ export default {
   },
   validateSchema: () => {
     const { t } = useTranslation();
-    const locale = gVariables.locale;
-
+    const locale = useSelector(localeState);
+    
     const _objSchema = {
       firstname: yup.string().required(t("validate.required")),
       lastname: yup.string().required(t("validate.required")),
@@ -34,7 +35,7 @@ export default {
   },
   dataForm: () => {
     const { t } = useTranslation();
-    const locale = gVariables.locale;
+    const locale = useSelector(localeState);
 
     // render firstname
     const firstname = {

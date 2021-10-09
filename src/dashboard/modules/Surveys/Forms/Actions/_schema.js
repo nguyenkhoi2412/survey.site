@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
-import { siteState } from "@redux/providers/site.reducer";
+import { siteState, localeState} from "@redux/providers/site.reducer";
 import { Helpers, hooksInstance } from "@utils/helpers";
 import * as yup from "yup";
 import moment from "moment";
@@ -48,7 +48,7 @@ export default {
   },
   validateSchema: () => {
     const { t } = useTranslation();
-    const locale = gVariables.locale.default;
+    const locale = useSelector(localeState);
 
     const _objSchema = {
       categories_ref: yup.array().min(1, t("validate.required")),
@@ -82,7 +82,7 @@ export default {
     const { t } = useTranslation();
     const router = hooksInstance.useRouter();
     const type_ref = router.query.typeid;
-    const locale = gVariables.locale.default;
+    const locale = useSelector(localeState);
     const category = useSelector(categoryState);
     const dispatch = useDispatch();
 
@@ -160,7 +160,7 @@ export default {
       type: "treeselect",
       label: t("site.categories"),
       renderName: "survey",
-      datasource: buildTreeSelect(category.d),
+      datasource: buildTreeSelect(category.d, locale.lang),
       xs: 12,
       sm: 12,
     };

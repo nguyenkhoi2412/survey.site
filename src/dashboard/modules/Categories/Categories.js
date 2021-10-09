@@ -19,7 +19,7 @@ import {
   CATEGORY_DELETE,
   categoryState,
 } from "@redux/providers/category.reducer";
-import React from "react";
+import { localeState } from "@redux/providers/site.reducer";
 //#endregion
 
 const Categories = () => {
@@ -28,7 +28,7 @@ const Categories = () => {
 
   //#region init data
   const { t } = useTranslation();
-  const locale = gVariables.locale.default;
+  const locale = useSelector(localeState);
   const type = useSelector(typeState); // type get from app/index.js
   const dispatch = useDispatch();
   const dataStates = useSelector(categoryState);
@@ -273,7 +273,7 @@ export default Categories;
 //#region help build table
 const CellTitle = (props) => {
   const { data } = props;
-  const locale = gVariables.locale.default;
+  const locale = useSelector(localeState);
 
   return (
     <Space direction="vertical" size={0}>
@@ -292,7 +292,6 @@ const CellTitle = (props) => {
 const CellActions = (props) => {
   const { data, handleDelete, handleEdit } = props;
   const { t } = useTranslation();
-  const locale = gVariables.locale.default;
 
   return (
     <>

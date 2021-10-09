@@ -25,7 +25,6 @@ import {
   Button,
   message,
   Form,
-  Checkbox,
 } from "antd";
 import { DingdingOutlined } from "@ant-design/icons";
 //#endregion
@@ -45,7 +44,7 @@ import moment from "moment";
 const { Title } = Typography;
 const SignIn = () => {
   //#region declares variables
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   document.title = t("survey.loggin");
 
   const dispatch = useDispatch();

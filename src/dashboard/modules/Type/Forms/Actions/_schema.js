@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import { siteState } from "@redux/providers/site.reducer";
+import { siteState, localeState } from "@redux/providers/site.reducer";
 import { Helpers } from "@utils/helpers";
-import gVariables from "@stores/shared/variables";
 import * as yup from "yup";
 
 export default {
@@ -28,7 +27,7 @@ export default {
   },
   dataForm: () => {
     const { t } = useTranslation();
-    const locale = gVariables.locale.default;
+    const locale = useSelector(localeState);
 
     // render username
     const name = {

@@ -2,14 +2,15 @@ import "./DynamicInputAnswers.less";
 import { useTranslation } from "react-i18next";
 import RenderFieldForm from "@components/common/Forms/RenderFieldForm";
 import { Helpers, objectExtension } from "@utils/helpers";
-import gVariables from "@stores/shared/variables";
+import { localeState } from "@redux/providers/site.reducer";
+import { useSelector } from "react-redux";
 //#region redux
 //#endregion
 
 const DynamicInputAnswers = ({ questionType, dataAnswers, formik }) => {
   //#region init variables
   const { t } = useTranslation();
-  const locale = gVariables.locale.default;
+  const locale = useSelector(localeState);
   const field = "answers";
   const fieldSelect = "numberOfAnswers";
   const tabIndex = 7;

@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import response from "@redux/utils/response.helper";
 import siteServices from "@services/site";
+import gVariable from "@stores/shared/variables";
 
 export const SITE_GET_BY_NAME = createAsyncThunk(
   "site/getbyname",
@@ -10,7 +11,7 @@ export const SITE_GET_BY_NAME = createAsyncThunk(
 );
 
 // init state auth
-const initialState = response.INITIAL_STATE;
+const initialState = { ...response.INITIAL_STATE, locale: gVariable.locale };
 
 export const site = createSlice({
   name: "site",

@@ -9,7 +9,7 @@ import ActionType from "@dashboard/modules/Surveys/Forms/Actions";
 import { Helpers, objectExtension } from "@utils/helpers";
 //#endregion
 //#region ant design
-import { Row, Col, message, Space, Tag, Popconfirm, Select } from "antd";
+import { Row, Col, message, Space, Tag, Popconfirm } from "antd";
 //#endregion
 //#region Redux
 import { useDispatch, useSelector } from "react-redux";
@@ -19,13 +19,13 @@ import {
   SURVEY_DELETE,
   surveyState,
 } from "@redux/providers/survey.reducer";
-import React from "react";
+import { localeState } from "@redux/providers/site.reducer";
 //#endregion
 
 const Surveys = () => {
   //#region init data
   const { t } = useTranslation();
-  const locale = gVariables.locale.default;
+  const locale = useSelector(localeState);
   const type = useSelector(typeState); // type get from app/index.js
   const dispatch = useDispatch();
   const dataStates = useSelector(surveyState);

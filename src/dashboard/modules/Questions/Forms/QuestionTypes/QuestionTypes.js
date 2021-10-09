@@ -32,13 +32,13 @@ import {
   QUESTION_UPDATE,
   questionState,
 } from "@redux/providers/question.reducer";
-import React from "react";
+import { localeState } from "@redux/providers/site.reducer";
 //#endregion
 
 const QuestionTypes = (props) => {
   let { data, qTypes, onCloseDrawer } = props;
 
-  const locale = gVariables.locale.default;
+  const locale = useSelector(localeState);
   const { t } = useTranslation();
   const dispatch = useDispatch();
   const valueState = useSelector(questionState);

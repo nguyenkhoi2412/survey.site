@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import { siteState } from "@redux/providers/site.reducer";
-import gVariables from "@stores/shared/variables";
+import { siteState, localeState } from "@redux/providers/site.reducer";
 import { Helpers, hooksInstance } from "@utils/helpers";
 import { buildTreeSelect } from "@utils/buildTreeView";
 import * as yup from "yup";
@@ -38,7 +37,7 @@ export default {
   },
   dataForm: () => {
     const { t } = useTranslation();
-    const locale = gVariables.locale.default;
+    const locale = useSelector(localeState);
     const type = useSelector(typeState);
     const cate = useSelector(categoryState);
 
@@ -49,7 +48,7 @@ export default {
       type: "treeselect",
       label: t("category.select_parent"),
       renderName: "category-hierarchy",
-      datasource: buildTreeSelect(cate.d),
+      datasource: buildTreeSelect(cate.d, locale.lang),
       xs: 24,
       sm: 24,
     };

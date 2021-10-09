@@ -4,13 +4,6 @@ export default {
   //* use for frontend site
   defaultDateFormat: "YYYY-MM-DD",
   locale: {
-    default: {
-      lang: "vi",
-      code: "vi-VN",
-      language_name: "Tiếng Việt",
-      date_format: "DD-MM-YYYY",
-      time_format: "HH:mm",
-    },
     lang: "vi",
     code: "vi-VN",
     language_name: "Tiếng Việt",

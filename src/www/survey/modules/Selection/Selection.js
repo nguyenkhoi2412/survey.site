@@ -4,10 +4,8 @@ import {
   Helpers,
   hooksInstance,
   objectExtension,
-  dateExtension,
 } from "@utils/helpers";
 import encrypt from "@utils/encrypt.helper";
-import gVariables from "@stores/shared/variables";
 import { Tooltip, Row, Col, Space, Typography, Card } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -18,7 +16,7 @@ import {
   USER_ANSWER_UPDATE,
   userAnswerState,
 } from "@redux/ui/survey/user_answer.reducer";
-import React from "react";
+import { localeState } from "@redux/providers/site.reducer";
 
 const { Title } = Typography;
 const { Meta } = Card;
@@ -26,7 +24,7 @@ const { Meta } = Card;
 const Selection = (surveyInfos) => {
   //#region init data/hooks
   const { t } = useTranslation();
-  const locale = gVariables.locale;
+  const locale = useSelector(localeState);
   const dispatch = useDispatch();
   const surveys = useSelector(surveyState);
   const user = useSelector(userAnswerState);

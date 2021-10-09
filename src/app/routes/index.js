@@ -10,13 +10,13 @@ const RELATIVE_PATH = process.env.RELATIVE_PATH || "/";
 export default [
   //#region Home page
   {
-    path: "/home",
+    path: RELATIVE_PATH + "home",
     public: true,
     title: "Home",
     children: <Home />,
   },
   {
-    path: "/about",
+    path: RELATIVE_PATH + "about",
     exact: true,
     public: true,
     title: "About",

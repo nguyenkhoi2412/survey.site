@@ -7,6 +7,21 @@
   pointer-events: none;
 }
 
+.ant-anchor {
+  display: flex;
+  .ant-anchor-ink {
+    &:before {
+      width: 0;
+    }
+  }
+
+  .ant-anchor-link {
+    .ant-anchor-link-title {
+      color: #fff;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

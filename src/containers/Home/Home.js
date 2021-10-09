@@ -1,6 +1,8 @@
 import "./Home.less";
+import { Redirect } from "react-router-dom";
 import logo from "@assets/images/logo.svg";
-import { Space, Button } from "antd";
+import { Space, Button, Anchor } from "antd";
+const { Link } = Anchor;
 import { hooksInstance } from "@utils/helpers";
 
 const Home = () => {
@@ -13,12 +15,20 @@ const Home = () => {
           <img src={logo} className="App-logo" alt="logo" />
           <div>
             <Space>
-              <Button
+              <Anchor>
+                <Link href="/dashboard/login" title="Go to Dashboard" />
+                <Link href="/survey/login" title="Go to Survey" />
+              </Anchor>
+              {/* <Button
                 type="secondary"
                 htmlType="reset"
                 className="form-button"
-                onClick={() => router.push("/dashboard/login")}
-              >Go to Dashboard</Button>
+                onClick={() => {
+                  return <Redirect exact from="/home" to="/dashboard/login" />;
+                }}
+              >
+                Go to Dashboard
+              </Button>
               <Button
                 type="secondary"
                 htmlType="reset"
@@ -26,7 +36,7 @@ const Home = () => {
                 onClick={() => router.push("/survey/login")}
               >
                 Go to Survey
-              </Button>
+              </Button> */}
             </Space>
           </div>
         </header>

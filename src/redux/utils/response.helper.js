@@ -25,19 +25,29 @@ export default {
     };
   },
   INSERT: (state, response, additionalData = {}) => {
-    const tempState = {
-      ...state,
-      isFetching: false,
-      ok: response.ok,
-      message: response.message,
-      action: gVariables.INSERT,
-      d: arrayExtension.insert(state.d, 0, response.rs[0]),
-    };
+    if (response === undefined) {
+      return {
+        ...state,
+        isFetching: false,
+        ok: false,
+        message: 'Tài khoản "test", nên bạn không thể thêm mới/cập nhật hoặc xóa dữ liệu',
+        action: gVariables.INSERT,
+      };
+    } else {
+      const tempState = {
+        ...state,
+        isFetching: false,
+        ok: response.ok,
+        message: response.message,
+        action: gVariables.INSERT,
+        d: arrayExtension.insert(state.d, 0, response.rs[0]),
+      };
 
-    return {
-      ...tempState,
-      ...additionalData,
-    };
+      return {
+        ...tempState,
+        ...additionalData,
+      };
+    }
   },
   UPDATE: (state, response, additionalData = {}) => {
     if (response === undefined) {
@@ -45,7 +55,7 @@ export default {
         ...state,
         isFetching: false,
         ok: false,
-        message: 'Tài khoản "test", nên bạn không thể cập nhật/xóa dữ liệu',
+        message: 'Tài khoản "test", nên bạn không thể thêm mới/cập nhật hoặc xóa dữ liệu',
         action: gVariables.UPDATE,
       };
     } else {
@@ -70,7 +80,7 @@ export default {
         ...state,
         isFetching: false,
         ok: false,
-        message: 'Tài khoản "test", nên bạn không thể cập nhật/xóa dữ liệu',
+        message: 'Tài khoản "test", nên bạn không thể thêm mới/cập nhật hoặc xóa dữ liệu',
         action: gVariables.DELETE,
       };
     } else {

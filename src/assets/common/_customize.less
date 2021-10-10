@@ -198,8 +198,14 @@
     }
 
     &.ant-input-affix-wrapper {
-      .floating-label {
-        left: 28px;
+      .ant-input-prefix {
+        + input {
+          + .ant-input-prefix {
+            .floating-label {
+              left: 28px;
+            }
+          }
+        }
       }
 
       &.ant-input-affix-wrapper-focused {

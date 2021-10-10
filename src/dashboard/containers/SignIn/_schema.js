@@ -5,8 +5,8 @@ import * as yup from "yup";
 export default {
   initialValues: () => {
     return {
-      username: "test",
-      password: "test",
+      username: "visitor",
+      password: "visitor",
     };
   },
   dataForm: () => {
@@ -18,7 +18,6 @@ export default {
       id: "username",
       field: "username",
       type: "text",
-      label: t("signin.username"),
       renderName: "signin",
       autoFocus: true,
       helperText: t("signin.enterusername"),
@@ -34,7 +33,6 @@ export default {
       id: "password",
       field: "password",
       type: "password",
-      label: t("signin.password"),
       renderName: "signin",
       helperText: t("signin.enterpassword"),
       usePrefix: <LockOutlined className="site-form-item-icon" />,

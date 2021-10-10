@@ -30,7 +30,7 @@ export default {
         ...state,
         isFetching: false,
         ok: false,
-        message: 'Tài khoản "test", nên bạn không thể thêm mới/cập nhật hoặc xóa dữ liệu',
+        message: "Method Not Allowed",
         action: gVariables.INSERT,
       };
     } else {
@@ -55,7 +55,7 @@ export default {
         ...state,
         isFetching: false,
         ok: false,
-        message: 'Tài khoản "test", nên bạn không thể thêm mới/cập nhật hoặc xóa dữ liệu',
+        message: "Method Not Allowed",
         action: gVariables.UPDATE,
       };
     } else {
@@ -80,7 +80,7 @@ export default {
         ...state,
         isFetching: false,
         ok: false,
-        message: 'Tài khoản "test", nên bạn không thể thêm mới/cập nhật hoặc xóa dữ liệu',
+        message: "Method Not Allowed",
         action: gVariables.DELETE,
       };
     } else {

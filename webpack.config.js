@@ -29,7 +29,7 @@ const themeAntdPalette = lessToJs(paletteLess, {
 
 module.exports = (env, argv) => {
   const mode = argv.mode || "development";
-  const isProd = mode === "production";
+  const isDev = mode === "development";
 
   const baseConfig = {
     entry: {
@@ -211,6 +211,20 @@ module.exports = (env, argv) => {
         // favicon: path.resolve(__dirname, "./assets/favicons/dashboard/favicon.ico"), //them file favicon vào trang html
         hash: true, //them thẻ <script> với đường link đính kèm 1 mã hash
         showErrors: false, //neu co loi sẽ ghi vào file html
+        minify: isDev
+          ? {}
+          : {
+              removeComments: true,
+              collapseWhitespace: true,
+              removeRedundantAttributes: true,
+              useShortDoctype: true,
+              removeEmptyAttributes: true,
+              removeStyleLinkTypeAttributes: true,
+              keepClosingSlash: true,
+              minifyJS: true,
+              minifyCSS: true,
+              minifyURLs: true,
+            },
       }),
     ],
   };

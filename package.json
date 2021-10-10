@@ -70,7 +70,6 @@
     "redux-thunk": "^2.3.0",
     "style-loader": "^2.0.0",
     "style-resources-loader": "^1.4.1",
-    "terser-webpack-plugin": "^5.2.4",
     "webpack": "^5.33.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",
